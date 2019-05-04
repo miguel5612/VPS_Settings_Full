@@ -101,9 +101,45 @@ curl -O https://wordpress.org/latest.tar.gz
 
 tar xzvf latest.tar.gz
 
-sudo cp -a /tmp/wordpress/. /var/www/html
+sudo cp -a /tmp/wordpress/. /var/www/html/onmotica.com
 
-sudo chown -R www-data:www-data /var/www/wp.onmotica.com
+sudo chown -R www-data:www-data /var/www/html/onmotica.com
+
+__Php my admin(2) con nginx (admindb.onmotica.com)__
+
+
+__Para mi dominio ppal onmotica.com__
+
+
+sudo nano /etc/nginx/sites-available/onmotica.com
+```
+server
+{
+        root /var/www/html/onmotica.com/;
+        index index.php;
+        server_name onmotica.com;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+        location ~\.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        }
+        location ~/\.ht {
+                deny all;
+        }
+
+
+    listen 80;
+
+}
+
+```
+__Activar el sitio web__
+
+
+sudo ln -s /etc/nginx/sites-available/onmotica.com /etc/nginx/sites-enabled
 
 __Para mi subdominio(2) admindb.onmotica.com__
 
