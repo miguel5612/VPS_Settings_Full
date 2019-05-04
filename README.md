@@ -20,8 +20,11 @@ Como proceder:
 __Primer paso__
 
 Compra tu dominio en namecheap.com y crea los subdominios. Para crearlos entra a la configuracion avanzada del dns y colocas un registro tipo A, en el segundo campo el nombre del subdominio y luego la ip.
+
 Ejemplo:
+
 (1) onhub.onmotica.com
+
 (2) pma.onmotica.com
 
 __Segundo paso__
