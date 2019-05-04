@@ -13,9 +13,9 @@ requisitos:
 7. wordpress
 Como proceder:
 --------------------
-**Primer paso***
+***Primer paso***
 Compra tu dominio en namecheap.com y crea los subdominios. Para crearlos entra a la configuracion avanzada del dns y colocas un registro tipo A, en el segundo campo el nombre del subdominio y luego la ip.
-**Segundo paso***
+***Segundo paso***
 Ejecuta los siguientes comandos:
 sudo apt-get update
 sudo apt-get install nano
@@ -25,9 +25,9 @@ sudo apt-get install nginx
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
 sudo apt-get instlal php-fpm php-mysql
-**Para mi subdominio(1) onhub.onmotica.com***
+***Para mi subdominio(1) onhub.onmotica.com***
 sudo nano /etc/nginx/sites-available/onhub.onmotica.com
-**Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano***
+***Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano***
 ```
 server
 {
