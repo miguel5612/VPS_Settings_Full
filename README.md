@@ -38,6 +38,9 @@ sudo apt-get install nginx
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
 sudo apt-get instlal php-fpm php-mysql
+sudo apt update
+sudo ufw allow 'Nginx HTTP'
+systemctl status nginx
 
 __Para mi subdominio(1) onhub.onmotica.com__
 
