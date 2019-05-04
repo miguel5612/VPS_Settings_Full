@@ -98,7 +98,9 @@ cd /tmp
 curl -O https://wordpress.org/latest.tar.gz
 
 tar xzvf latest.tar.gz
+
 sudo cp -a /tmp/wordpress/. /var/www/html
+
 sudo chown -R www-data:www-data /var/www/wp.onmotica.com
 
 __Para mi subdominio(2) admindb.onmotica.com__
@@ -182,9 +184,13 @@ export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 command -v nvm
+
 export NVM_DIR="$HOME/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 nvm ls-remote
 
 Contacto:
