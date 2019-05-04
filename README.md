@@ -1,5 +1,3 @@
-# VPS_Settings_Full
-Configuracion para publicar en un vps una aplicacion que usa wordpress, mysql, phpmyadmin, nvm y certbot
 Configuraciones VPS Linux (Ubuntu)
 ==========
 cada vez que nos enfrentamos con la publicacion de una plataforma existe la duda sobre como sera la mejor manera de publicarlo. Este repositorio contentra todas y cada una de las instrucciones para configurar y poner en linea tu aplicacion en el puerto 80.
