@@ -94,7 +94,9 @@ sudo phpenmod mcrypt
 sudo systemctl restart php7.0-fpm
 
 __wordpress - apunta a wp.onmotica.com__
+
 cd /tmp
+
 curl -O https://wordpress.org/latest.tar.gz
 
 tar xzvf latest.tar.gz
