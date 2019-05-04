@@ -20,6 +20,9 @@ Como proceder:
 __Primer paso__
 
 Compra tu dominio en namecheap.com y crea los subdominios. Para crearlos entra a la configuracion avanzada del dns y colocas un registro tipo A, en el segundo campo el nombre del subdominio y luego la ip.
+Ejemplo:
+(1) onhub.onmotica.com
+(2) pma.onmotica.com
 
 __Segundo paso__
 
@@ -75,7 +78,7 @@ tar xzvf latest.tar.gz
 sudo cp -a /tmp/wordpress/. /var/www/html
 sudo chown -R www-data:www-data /var/www/wp.onmotica.com
 
-__Php my admin con nginx (pma.onmotica.com)__
+__Php my admin(2) con nginx (pma.onmotica.com)__
 ```
 server
 {
@@ -113,7 +116,7 @@ __para comprobar__
 
 sudo nginx
 
-__En caso que algo ocupe el puerto 8__
+__En caso que algo ocupe el puerto 80__
 
 sdo lsof -i -P-n
 
