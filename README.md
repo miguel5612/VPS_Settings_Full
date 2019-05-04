@@ -109,7 +109,7 @@ __reinicio nginx__
 
 sudo systemctl reload nginx
 
-__para comproba__
+__para comprobar__
 
 sudo nginx
 
