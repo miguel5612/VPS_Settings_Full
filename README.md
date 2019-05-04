@@ -45,7 +45,7 @@ sudo apt-get install mysql-server
 
 sudo mysql_secure_installation
 
-sudo apt-get instlal php-fpm php-mysql
+sudo apt-get install php-fpm php-mysql
 
 sudo apt update
 
@@ -142,7 +142,7 @@ sdo lsof -i -P-n
 
 __Para desinstalar apache si viene por defecto__
 
-sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-prefork apache2-utils.
+sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-prefork apache2-utils
 
 __Certificado SSL__
 
