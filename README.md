@@ -17,10 +17,10 @@ requisitos:
 Como proceder:
 --------------------
 
-** Primer paso **
+__Primer paso__
 
 Compra tu dominio en namecheap.com y crea los subdominios. Para crearlos entra a la configuracion avanzada del dns y colocas un registro tipo A, en el segundo campo el nombre del subdominio y luego la ip.
-** Segundo paso **
+__Segundo paso__
 
 Ejecuta los siguientes comandos:
 sudo apt-get update
@@ -31,10 +31,10 @@ sudo apt-get install nginx
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
 sudo apt-get instlal php-fpm php-mysql
-** Para mi subdominio(1) onhub.onmotica.com **
+__Para mi subdominio(1) onhub.onmotica.com__
 
 sudo nano /etc/nginx/sites-available/onhub.onmotica.com
-** Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano **
+__Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano__
 
 ```
 server
@@ -49,7 +49,7 @@ server
 }
 ```
 sudo ln -s /etc/nginx/sites-available/onhub.onmotica.com /etc/nginx/sites-enabled
-** Elimino el sitio por defecto de nginx **
+__Elimino el sitio por defecto de nginx__
 sudo unlink etc/nginx/sites-enabled/default
 sudo nano /var/www/html/info.php
 ```
@@ -61,7 +61,7 @@ sudo ln -s /usr/share/phpmyadmin /var/www/html
 sudo phpenmod mcrypt
 sudo systemctl restart php7.0-fpm
 
-** wordpress - apunta a wp.onmotica.com **
+__wordpress - apunta a wp.onmotica.com__
 cd /tmp
 curl -O https://wordpress.org/latest.tar.gz
 
@@ -69,7 +69,7 @@ tar xzvf latest.tar.gz
 sudo cp -a /tmp/wordpress/. /var/www/html
 sudo chown -R www-data:www-data /var/www/wp.onmotica.com
 
-** Php my admin con nginx (pma.onmotica.com) **
+__Php my admin con nginx (pma.onmotica.com)__
 ```
 server
 {
@@ -95,27 +95,27 @@ server
 
 ```
 
-** Verifico lo que he hecho **
+__Verifico lo que he hecho__
 
 sudo nginx -t
 
-** reinicio nginx **
+__reinicio nginx__
 
 sudo systemctl reload nginx
 
-** para comprobar**
+__para comproba__
 
 sudo nginx
 
-** En caso que algo ocupe el puerto 80**
+__En caso que algo ocupe el puerto 8__
 
-sudo lsof -i -P -n
+sdo lsof -i -P-n
 
-** Para desinstalar apache si viene por defecto**
+__ Para desinstalar apache si viene por defecto__
 
 sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-prefork apache2-utils.
 
-** Certificado SSL **
+__ Certificado SSL __
 
 sudo apt-get update
 
@@ -131,7 +131,7 @@ sudo apt-get install certbot python-certbot-nginx
 
 sudo certbot --nginx
 
-** NVM (Node version manager) **
+__ NVM (Node version manager) __
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
