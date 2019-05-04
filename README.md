@@ -3,7 +3,7 @@ Configuraciones VPS Linux (Ubuntu)
 cada vez que nos enfrentamos con la publicacion de una plataforma existe la duda sobre como sera la mejor manera de publicarlo. Este repositorio contentra todas y cada una de las instrucciones para configurar y poner en linea tu aplicacion en el puerto 80.
 
 requisitos:
---------------------
+==========
 1. editor nano
 2. curl
 3. nginx
@@ -129,6 +129,6 @@ export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 command -v nvm
 nvm ls-remote
 Contacto:
---------------------
+=============
 + miguelangelcu@ufps.edu.co - 3192597748
 
