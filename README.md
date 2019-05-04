@@ -71,6 +71,9 @@ server
     listen 80;
 }
 ```
+
+__Activar el sitio web__
+
 sudo ln -s /etc/nginx/sites-available/onhub.onmotica.com /etc/nginx/sites-enabled
 
 __Elimino el sitio por defecto de nginx__
@@ -101,7 +104,9 @@ sudo chown -R www-data:www-data /var/www/wp.onmotica.com
 __Para mi subdominio(2) admindb.onmotica.com__
 
 sudo nano /etc/nginx/sites-available/admindb.onmotica.com
+
 __Php my admin(2) con nginx (admindb.onmotica.com)__
+
 ```
 server
 {
@@ -126,6 +131,11 @@ server
 }
 
 ```
+
+__Activar el sitio web__
+
+
+sudo ln -s /etc/nginx/sites-available/admindb.onmotica.com /etc/nginx/sites-enabled
 
 __Verifico lo que he hecho__
 
