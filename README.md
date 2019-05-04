@@ -1,4 +1,4 @@
-Configuraciones VPS Linux (Ubuntu)
+	Configuraciones VPS Linux (Ubuntu)
 ==========
 cada vez que nos enfrentamos con la publicacion de una plataforma existe la duda sobre como sera la mejor manera de publicarlo. Este repositorio contentra todas y cada una de las instrucciones para configurar y poner en linea tu aplicacion en el puerto 80.
 
@@ -13,11 +13,9 @@ requisitos:
 7. wordpress
 Como proceder:
 --------------------
-Primer paso 
------------------------
+** Primer paso **
 Compra tu dominio en namecheap.com y crea los subdominios. Para crearlos entra a la configuracion avanzada del dns y colocas un registro tipo A, en el segundo campo el nombre del subdominio y luego la ip.
-Segundo paso 
------------------------
+** Segundo paso **
 Ejecuta los siguientes comandos:
 sudo apt-get update
 sudo apt-get install nano
@@ -27,12 +25,9 @@ sudo apt-get install nginx
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
 sudo apt-get instlal php-fpm php-mysql
-Para mi subdominio(1) onhub.onmotica.com 
--------------------
+** Para mi subdominio(1) onhub.onmotica.com **
 sudo nano /etc/nginx/sites-available/onhub.onmotica.com
-Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano 
------------------------
-
+** Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano **
 ```
 server
 {
@@ -45,10 +40,8 @@ server
     listen 80;
 }
 ```
-
 sudo ln -s /etc/nginx/sites-available/onhub.onmotica.com /etc/nginx/sites-enabled
-Elimino el sitio por defecto de nginx 
------------------------
+** Elimino el sitio por defecto de nginx **
 sudo unlink etc/nginx/sites-enabled/default
 sudo nano /var/www/html/info.php
 ```
@@ -60,8 +53,7 @@ sudo ln -s /usr/share/phpmyadmin /var/www/html
 sudo phpenmod mcrypt
 sudo systemctl restart php7.0-fpm
 
-wordpress - apunta a wp.onmotica.com 
------------------------
+** wordpress - apunta a wp.onmotica.com **
 cd /tmp
 curl -O https://wordpress.org/latest.tar.gz
 
@@ -69,9 +61,7 @@ tar xzvf latest.tar.gz
 sudo cp -a /tmp/wordpress/. /var/www/html
 sudo chown -R www-data:www-data /var/www/wp.onmotica.com
 
-Php my admin con nginx (pma.onmotica.com) 
------------------------
-
+** Php my admin con nginx (pma.onmotica.com) **
 ```
 server
 {
@@ -97,23 +87,23 @@ server
 
 ```
 
-Verifico lo que he hecho 
------------------------
+** Verifico lo que he hecho **
+
 sudo nginx -t
-reinicio nginx 
------------------------
+** reinicio nginx **
+
 sudo systemctl reload nginx
-para comprobar
------------------------
+** para comprobar**
+
 sudo nginx
-En caso que algo ocupe el puerto 80
------------------------
+** En caso que algo ocupe el puerto 80**
+
 sudo lsof -i -P -n
-Para desinstalar apache si viene por defecto
------------------------
+** Para desinstalar apache si viene por defecto**
+
 sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-prefork apache2-utils.
-Certificado SSL 
------------------------
+** Certificado SSL **
+
 sudo apt-get update
 sudo apt-get install software-properties-common
 sudo add-apt-repository universe
@@ -121,13 +111,14 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
 sudo apt-get install certbot python-certbot-nginx 
 sudo certbot --nginx
-NVM (Node version manager) 
------------------------
+** NVM (Node version manager) **
+
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 command -v nvm
 nvm ls-remote
+
 Contacto:
 --------------------
 + miguelangelcu@ufps.edu.co - 3192597748
