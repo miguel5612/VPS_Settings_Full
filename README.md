@@ -105,9 +105,6 @@ sudo cp -a /tmp/wordpress/. /var/www/html/onmotica.com
 
 sudo chown -R www-data:www-data /var/www/html/onmotica.com
 
-__Php my admin(2) con nginx (admindb.onmotica.com)__
-
-
 __Para mi dominio ppal onmotica.com__
 
 
