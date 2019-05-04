@@ -98,13 +98,16 @@ tar xzvf latest.tar.gz
 sudo cp -a /tmp/wordpress/. /var/www/html
 sudo chown -R www-data:www-data /var/www/wp.onmotica.com
 
-__Php my admin(2) con nginx (pma.onmotica.com)__
+__Para mi subdominio(1) admindb.onmotica.com__
+
+sudo nano /etc/nginx/sites-available/admindb.onmotica.com
+__Php my admin(2) con nginx (admindb.onmotica.com)__
 ```
 server
 {
         root /var/www/html/phpmyadmin/;
         index index.php;
-        server_name pma.onmotica.com;
+        server_name admindb.onmotica.com;
 
         location / {
                 try_files $uri $uri/ =404;
