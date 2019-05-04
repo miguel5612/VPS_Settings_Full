@@ -114,21 +114,33 @@ sudo lsof -i -P -n
 ** Para desinstalar apache si viene por defecto**
 
 sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-prefork apache2-utils.
+
 ** Certificado SSL **
 
 sudo apt-get update
+
 sudo apt-get install software-properties-common
+
 sudo add-apt-repository universe
+
 sudo add-apt-repository ppa:certbot/certbot
+
 sudo apt-get update
+
 sudo apt-get install certbot python-certbot-nginx 
+
 sudo certbot --nginx
+
 ** NVM (Node version manager) **
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
 export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 command -v nvm
+
 nvm ls-remote
 
 Contacto:
