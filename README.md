@@ -13,6 +13,7 @@ requisitos:
 5. php
 6. phpmyadmin
 7. wordpress
+
 Como proceder:
 --------------------
 
