@@ -30,16 +30,27 @@ Ejemplo:
 __Segundo paso__
 
 Ejecuta los siguientes comandos:
+
 sudo apt-get update
+
 sudo apt-get install nano
+
 sudo apt-get install software-properties-common
+
 sudo apt-get install curl
+
 sudo apt-get install nginx
+
 sudo apt-get install mysql-server
+
 sudo mysql_secure_installation
+
 sudo apt-get instlal php-fpm php-mysql
+
 sudo apt update
+
 sudo ufw allow 'Nginx HTTP'
+
 systemctl status nginx
 
 __Para mi subdominio(1) onhub.onmotica.com__
@@ -72,8 +83,11 @@ sudo nano /var/www/html/info.php
 phpinfo()
 ```
 sudo apt-get install phpmyadmin
+
 sudo ln -s /usr/share/phpmyadmin /var/www/html
+
 sudo phpenmod mcrypt
+
 sudo systemctl restart php7.0-fpm
 
 __wordpress - apunta a wp.onmotica.com__
