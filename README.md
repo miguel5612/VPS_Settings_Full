@@ -1,9 +1,11 @@
-	Configuraciones VPS Linux (Ubuntu)
+Configuraciones VPS Linux (Ubuntu)
 ==========
+
 cada vez que nos enfrentamos con la publicacion de una plataforma existe la duda sobre como sera la mejor manera de publicarlo. Este repositorio contentra todas y cada una de las instrucciones para configurar y poner en linea tu aplicacion en el puerto 80.
 
 requisitos:
 --------------------
+
 1. editor nano
 2. curl
 3. nginx
@@ -13,9 +15,12 @@ requisitos:
 7. wordpress
 Como proceder:
 --------------------
+
 ** Primer paso **
+
 Compra tu dominio en namecheap.com y crea los subdominios. Para crearlos entra a la configuracion avanzada del dns y colocas un registro tipo A, en el segundo campo el nombre del subdominio y luego la ip.
 ** Segundo paso **
+
 Ejecuta los siguientes comandos:
 sudo apt-get update
 sudo apt-get install nano
@@ -26,8 +31,10 @@ sudo apt-get install mysql-server
 sudo mysql_secure_installation
 sudo apt-get instlal php-fpm php-mysql
 ** Para mi subdominio(1) onhub.onmotica.com **
+
 sudo nano /etc/nginx/sites-available/onhub.onmotica.com
 ** Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano **
+
 ```
 server
 {
