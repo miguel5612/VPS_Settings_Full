@@ -20,6 +20,7 @@ Como proceder:
 __Primer paso__
 
 Compra tu dominio en namecheap.com y crea los subdominios. Para crearlos entra a la configuracion avanzada del dns y colocas un registro tipo A, en el segundo campo el nombre del subdominio y luego la ip.
+
 __Segundo paso__
 
 Ejecuta los siguientes comandos:
@@ -31,9 +32,11 @@ sudo apt-get install nginx
 sudo apt-get install mysql-server
 sudo mysql_secure_installation
 sudo apt-get instlal php-fpm php-mysql
+
 __Para mi subdominio(1) onhub.onmotica.com__
 
 sudo nano /etc/nginx/sites-available/onhub.onmotica.com
+
 __Colocar esto dentro de el archivo onhub.onmotica.com en el editor nano__
 
 ```
@@ -49,8 +52,11 @@ server
 }
 ```
 sudo ln -s /etc/nginx/sites-available/onhub.onmotica.com /etc/nginx/sites-enabled
+
 __Elimino el sitio por defecto de nginx__
+
 sudo unlink etc/nginx/sites-enabled/default
+
 sudo nano /var/www/html/info.php
 ```
 <?php
@@ -111,11 +117,11 @@ __En caso que algo ocupe el puerto 8__
 
 sdo lsof -i -P-n
 
-__ Para desinstalar apache si viene por defecto__
+__Para desinstalar apache si viene por defecto__
 
 sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-prefork apache2-utils.
 
-__ Certificado SSL __
+__Certificado SSL__
 
 sudo apt-get update
 
@@ -131,7 +137,7 @@ sudo apt-get install certbot python-certbot-nginx
 
 sudo certbot --nginx
 
-__ NVM (Node version manager) __
+__NVM (Node version manager)__
 
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
