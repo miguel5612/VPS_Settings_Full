@@ -96,8 +96,8 @@ server
 ```
 
 ** Verifico lo que he hecho **
-
 sudo nginx -t
+
 ** reinicio nginx **
 
 sudo systemctl reload nginx
