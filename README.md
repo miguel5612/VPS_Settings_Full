@@ -98,7 +98,7 @@ tar xzvf latest.tar.gz
 sudo cp -a /tmp/wordpress/. /var/www/html
 sudo chown -R www-data:www-data /var/www/wp.onmotica.com
 
-__Para mi subdominio(1) admindb.onmotica.com__
+__Para mi subdominio(2) admindb.onmotica.com__
 
 sudo nano /etc/nginx/sites-available/admindb.onmotica.com
 __Php my admin(2) con nginx (admindb.onmotica.com)__
