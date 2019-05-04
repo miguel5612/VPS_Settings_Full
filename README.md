@@ -96,17 +96,21 @@ server
 ```
 
 ** Verifico lo que he hecho **
+
 sudo nginx -t
 
 ** reinicio nginx **
 
 sudo systemctl reload nginx
+
 ** para comprobar**
 
 sudo nginx
+
 ** En caso que algo ocupe el puerto 80**
 
 sudo lsof -i -P -n
+
 ** Para desinstalar apache si viene por defecto**
 
 sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-prefork apache2-utils.
