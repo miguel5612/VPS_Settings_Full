@@ -112,12 +112,12 @@ sudo nano /etc/nginx/sites-available/onmotica.com
 ```
 server
 {
-        root /var/www/html/onmotica.com/;
+        root /var/www/html/evoclick.onmotica.com/;
         index index.php;
-        server_name onmotica.com;
+        server_name evoclick.onmotica.com;
 
         location / {
-                try_files $uri $uri/ =404;
+                  try_files $uri $uri/ /index.php?$args;
         }
         location ~\.php$ {
                 include snippets/fastcgi-php.conf;
