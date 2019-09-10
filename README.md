@@ -18,6 +18,7 @@ configurar zona horaria:
 --------------------
 
 sudo dpkg-reconfigure tzdata - follow the instructions to select Region/Country
+
 sudo service cron restart
 
 Como proceder:
