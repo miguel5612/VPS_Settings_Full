@@ -195,7 +195,7 @@ sudo nginx
 
 __En caso que algo ocupe el puerto 80__
 
-sdo lsof -i -P-n
+sudo lsof -i -P -n
 
 __Para desinstalar apache si viene por defecto__
 
