@@ -195,7 +195,9 @@ sudo nginx
 __para cambiar contraseña__
 
 sudo passwd {userNameHere}
+
 sudo passwd jerry ## <-- change password for jerry ##
+
 sudo passwd vivek ## <-- change password for vivek ##
 
 __En caso que algo ocupe el puerto 80__
