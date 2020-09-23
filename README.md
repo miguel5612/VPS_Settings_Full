@@ -210,6 +210,8 @@ sudo  apt-get purge apache2 apache2-bin apache2-data apache2-doc apache2-mpm-pre
 
 __Certificado SSL__
 
+curl -sSL https://repos.insights.digitalocean.com/install.sh | sudo bash
+
 sudo apt-get update
 
 sudo apt-get install software-properties-common
